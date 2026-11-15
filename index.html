@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fff7fb">
-  <meta name="description" content="The personal portfolio of NightBloomy, a student who loves learning and creating.">
+  <meta name="description" content="NightBloomy: a little corner for creativity, drawings, and bright ideas.">
   <title>NightBloomy | Little ideas, big dreams</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,17 +12,24 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body>
-  <div class="page-glow glow-one"></div>
-  <div class="page-glow glow-two"></div>
+<body data-theme="pink">
+  <div class="petal-layer" aria-hidden="true"></div>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="NightBloomy home"><span class="brand-flower">✿</span> NightBloomy</a>
-    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <a class="brand" href="#home" aria-label="NightBloomy home">
+      <img src="assets/nightbloomy-logo.jpg" alt="" class="brand-logo">
+      <span>NightBloomy</span><span class="brand-flower">✿</span>
+    </a>
+    <div class="header-actions">
+      <div class="theme-switcher" role="group" aria-label="Choose a colour theme">
+        <button class="theme-dot pink-dot" data-theme-choice="pink" aria-label="Pink theme" aria-pressed="true"></button>
+        <button class="theme-dot lilac-dot" data-theme-choice="lilac" aria-label="Lavender theme" aria-pressed="false"></button>
+        <button class="theme-dot night-dot" data-theme-choice="night" aria-label="Night theme" aria-pressed="false"></button>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
     <nav class="nav-links" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#interests">Interests</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact" class="nav-cta">Say hello <span>↗</span></a>
+      <a href="#about">About</a><a href="#interests">Interests</a><a href="#gallery">Art gallery</a>
+      <a href="#projects">Projects</a><a href="#contact" class="nav-cta">Say hello <span>↗</span></a>
     </nav>
   </header>
 
@@ -31,25 +38,18 @@
       <div class="hero-copy">
         <div class="eyebrow"><span class="sparkle">✦</span> a little corner of the internet</div>
         <h1>Hi, I'm <span>NightBloomy</span><br>and I'm growing<br>one idea at a time.</h1>
-        <p class="hero-intro">Student, curious mind, and enthusiastic beginner. I’m here to learn new things, make cool stuff, and turn tiny ideas into something real.</p>
+        <p class="hero-intro">A student, a maker, and a daydreamer who loves drawing, creating little things, and turning tiny ideas into something real.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#projects">Explore my world <span>↓</span></a>
-          <a class="text-link" href="#about">A little about me <span>↗</span></a>
+          <a class="button button-primary" href="#gallery">Visit my art corner <span>↓</span></a>
+          <button class="button button-soft" id="message-button">A little note for you <span>♡</span></button>
         </div>
-        <div class="tiny-note"><span class="note-dot"></span> currently learning, always blooming</div>
+        <div class="tiny-note"><span class="note-dot"></span> currently creating, always blooming</div>
       </div>
-      <div class="hero-art" aria-label="Decorative pastel illustration">
-        <div class="art-card">
-          <div class="art-topline"><span>MY LITTLE UNIVERSE</span><span>♡</span></div>
-          <div class="moon">☾</div>
-          <div class="flower flower-a">✿</div>
-          <div class="flower flower-b">✽</div>
-          <div class="art-center">
-            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-            <div class="planet">N</div>
-            <span class="orbit-star star-a">✦</span><span class="orbit-star star-b">✧</span>
-          </div>
-          <div class="art-caption"><strong>Dream softly.</strong><br><span>Build bravely.</span></div>
+      <div class="hero-art">
+        <div class="mascot-frame">
+          <span class="mascot-spark spark-left">✧</span><span class="mascot-spark spark-right">♡</span>
+          <img src="assets/nightbloomy-logo.jpg" alt="NightBloomy's hand-drawn character logo" class="hero-logo">
+          <span class="mascot-caption">your friendly little mascot ✿</span>
         </div>
         <span class="floating-pill pill-one">☁ daydreamer</span>
         <span class="floating-pill pill-two">✧ work in progress</span>
@@ -57,66 +57,74 @@
     </section>
 
     <section class="section-wrap about-section" id="about">
-      <div class="section-heading">
-        <span class="section-kicker">01 / THE PERSON BEHIND THE PIXELS</span>
-        <h2>A little <em>about me</em></h2>
-      </div>
+      <div class="section-heading"><span class="section-kicker">01 / THE PERSON BEHIND THE PIXELS</span><h2>A little <em>about me</em></h2></div>
       <div class="about-card">
         <div class="about-sticker">hello<br>there! <span>♡</span></div>
         <div>
-          <p class="about-lead">I'm NightBloomy, a student with a curious mind and a growing list of things I want to try.</p>
-          <p class="muted">This space is where I can share what I'm learning, the projects I'm making, and the ideas I'm collecting along the way. I'm still figuring things out, and that's part of the fun.</p>
+          <p class="about-lead">I'm NightBloomy, a student with a curious mind and a growing collection of ideas.</p>
+          <p class="muted">I love making things, drawing, and exploring creative ideas. This is my little online scrapbook for the things I create, the skills I'm learning, and the projects I hope to make next.</p>
           <p class="signature">Nice to meet you! <span>✿</span></p>
         </div>
       </div>
     </section>
 
     <section class="section-wrap interests-section" id="interests">
-      <div class="section-heading">
-        <span class="section-kicker">02 / THINGS THAT SPARK JOY</span>
-        <h2>Curious about <em>everything</em></h2>
-      </div>
+      <div class="section-heading"><span class="section-kicker">02 / THINGS THAT SPARK JOY</span><h2>My happy little <em>hobbies</em></h2></div>
       <div class="interest-grid">
-        <article class="interest-card pink"><span class="interest-icon">✎</span><h3>Learning</h3><p>Picking up new skills, one small step at a time.</p></article>
-        <article class="interest-card lilac"><span class="interest-icon">⌘</span><h3>Creating</h3><p>Turning random ideas into little experiments.</p></article>
-        <article class="interest-card mint"><span class="interest-icon">☁</span><h3>Exploring</h3><p>Finding inspiration in the everyday details.</p></article>
+        <article class="interest-card pink"><span class="interest-icon">✎</span><h3>Drawing</h3><p>Sketching characters, doodles, and whatever pops into my imagination.</p></article>
+        <article class="interest-card lilac"><span class="interest-icon">✿</span><h3>Making things</h3><p>Turning random ideas into cute creations and tiny experiments.</p></article>
+        <article class="interest-card mint"><span class="interest-icon">☁</span><h3>Exploring</h3><p>Collecting inspiration and learning something new along the way.</p></article>
       </div>
-      <p class="edit-hint">These are starter interests. Swap them for the things you genuinely love.</p>
+    </section>
+
+    <section class="section-wrap gallery-section" id="gallery">
+      <div class="section-heading"><span class="section-kicker">03 / THE SKETCHBOOK</span><h2>A tiny <em>art gallery</em></h2><p class="section-subtitle">Tap a picture to see it a little bigger. More of your creations can live here soon!</p></div>
+      <div class="gallery-grid">
+        <button class="art-tile logo-tile" data-gallery-title="NightBloomy mascot" data-gallery-description="The little character that represents this creative corner.">
+          <img src="assets/nightbloomy-logo.jpg" alt="NightBloomy mascot drawing"><span class="tile-caption">My little mascot <small>♡ original logo</small></span>
+        </button>
+        <button class="art-tile doodle-tile" data-gallery-title="A page of daydreams" data-gallery-description="A placeholder for a future sketch. Replace this tile with one of your drawings!">
+          <div class="doodle-art" aria-hidden="true"><span>☾</span><b>✿</b><i>✧</i><strong>dream<br>in colour</strong></div><span class="tile-caption">A page of daydreams <small>✦ sketchbook mood</small></span>
+        </button>
+        <button class="art-tile flower-tile" data-gallery-title="Little blooms" data-gallery-description="A soft little placeholder for another artwork you make.">
+          <div class="flower-art" aria-hidden="true"><span>✿</span><span>✽</span><span>❀</span><i>♡</i></div><span class="tile-caption">Little blooms <small>✦ more art soon</small></span>
+        </button>
+      </div>
+      <p class="edit-hint">To add your own drawings, put image files in the assets folder and duplicate a gallery tile in index.html.</p>
     </section>
 
     <section class="section-wrap projects-section" id="projects">
-      <div class="section-heading">
-        <span class="section-kicker">03 / MY CREATIVE PLAYGROUND</span>
-        <h2>Things I've <em>made</em></h2>
-      </div>
+      <div class="section-heading"><span class="section-kicker">04 / MY CREATIVE PLAYGROUND</span><h2>Things I've <em>made</em></h2></div>
       <div class="project-grid">
-        <article class="project-card project-featured">
-          <div class="project-visual visual-one"><span>✿</span><small>PROJECT 001</small></div>
-          <div class="project-info"><div class="project-meta">FIRST STEPS · WEBSITE</div><h3>My first portfolio</h3><p>A tiny home on the internet to collect my work and share my journey.</p><span class="status">✦ You're looking at it!</span></div>
-        </article>
-        <article class="project-card">
-          <div class="project-visual visual-two"><span>☁</span><small>YOUR NEXT IDEA</small></div>
-          <div class="project-info"><div class="project-meta">COMING SOON · YOUR CATEGORY</div><h3>A project in progress</h3><p>Replace this card with something you've built, drawn, written, or explored.</p><a class="text-link" href="#contact">Ask me about it <span>↗</span></a></div>
-        </article>
+        <article class="project-card"><div class="project-visual visual-one"><span>✿</span><small>PROJECT 001</small></div><div class="project-info"><div class="project-meta">FIRST STEPS · WEBSITE</div><h3>My first portfolio</h3><p>A tiny home on the internet to collect my work and share my creative journey.</p><span class="status">✦ You're looking at it!</span></div></article>
+        <article class="project-card"><div class="project-visual visual-two"><span>☁</span><small>YOUR NEXT IDEA</small></div><div class="project-info"><div class="project-meta">COMING SOON · YOUR CATEGORY</div><h3>A project in progress</h3><p>A space waiting for something you've built, drawn, written, or explored.</p><span class="status">♡ patiently blooming</span></div></article>
       </div>
-      <p class="edit-hint">No projects yet? That's completely okay. Keep this section and add your first one when you're ready.</p>
     </section>
 
-    <section class="contact-section" id="contact">
-      <div class="section-wrap contact-inner">
-        <span class="section-kicker">04 / YOUR TURN</span>
-        <h2>Have a lovely idea?<br><em>Let's say hello.</em></h2>
-        <p>I'd love to connect, learn, and hear what you're creating.</p>
-        <a class="button button-light" href="mailto:hello@example.com">Email me <span>↗</span></a>
-        <div class="contact-flower">✿</div>
-      </div>
+    <section class="message-section section-wrap">
+      <div class="message-card"><span class="message-flower">✿</span><div><span class="section-kicker">A POCKET-SIZED PICK-ME-UP</span><h2>Need a tiny <em>cheer-up?</em></h2><p id="encouragement-text" aria-live="polite">You don't have to bloom all at once. Little steps count, too. ♡</p></div><button class="button button-primary" id="another-message">Another note ✨</button></div>
     </section>
+
+    <section class="contact-section" id="contact"><div class="section-wrap contact-inner">
+      <span class="section-kicker">05 / YOUR TURN</span><h2>Have a lovely idea?<br><em>Let's say hello.</em></h2>
+      <p>I'd love to connect, learn, and hear what you're creating.</p>
+      <a class="button button-light" href="mailto:hello@example.com">Email me <span>↗</span></a>
+      <div class="contact-flower">✿</div>
+    </div></section>
   </main>
 
   <footer class="site-footer">
-    <a class="brand" href="#home"><span class="brand-flower">✿</span> NightBloomy</a>
-    <span>Made with care, curiosity & a little bit of pink. ♡</span>
-    <a href="#home" class="back-top">Back to top ↑</a>
+    <a class="brand footer-brand" href="#home"><img src="assets/nightbloomy-logo.jpg" alt="" class="brand-logo"> <span>NightBloomy</span></a>
+    <span>Made with care, curiosity & a little bit of pink. ♡</span><a href="#home" class="back-top">Back to top ↑</a>
   </footer>
+
+  <div class="gallery-modal" id="gallery-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" data-close-modal></div><div class="modal-panel">
+      <button class="modal-close" aria-label="Close artwork viewer" data-close-modal>×</button>
+      <div id="modal-artwork" class="modal-artwork"></div><h2 id="modal-title"></h2><p id="modal-description"></p>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <button class="surprise-button" id="surprise-button" aria-label="Find a little surprise">🐰</button>
 </body>
 </html>
